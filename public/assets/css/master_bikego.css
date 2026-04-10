@@ -1,0 +1,314 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(135deg, #e0f2fe 0%, #fdf2f8 100%);
+    min-height: 100vh;
+}
+
+/* Dual-Tone Theme Classes */
+.bg-theme-blue { background-color: #0ea5e9 !important; color: white !important; }
+.bg-theme-pink { background-color: #ec4899 !important; color: white !important; }
+.text-theme-blue { color: #0ea5e9 !important; }
+.text-theme-pink { color: #ec4899 !important; }
+
+.btn-theme {
+    background: linear-gradient(to right, #0ea5e9, #ec4899);
+    border: none;
+    color: white;
+}
+.btn-theme:hover {
+    background: linear-gradient(to right, #0284c7, #db2777);
+    color: white;
+}
+.logo-text {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-size: 54px;
+    font-weight: 800;
+    color: #ff6200;
+    text-decoration: none;
+    letter-spacing: -2px;
+}
+.logo-text span {
+    color: #000;
+}
+@media (max-width: 576px) {
+    .logo-text {
+        font-size: 36px;
+    }
+}
+.nav-link {
+    font-weight: 500;
+}
+.top-user {
+    background: #e6f2ff;
+    border-radius: 10px;
+    padding: 15px;
+}
+.list-user {
+    background: #e6f2ff;
+    border-radius: 10px;
+    padding: 15px;
+}
+.stat-box {
+    background: #cce5ff;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+}
+.stat-box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #0d6efd;
+}
+footer {
+    background: linear-gradient(to right, #0ea5e9, #ec4899);
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.banner {
+    height: 160px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: all 0.4s ease;
+}
+
+.slide img {
+    height: auto;
+    width: 100%;
+    max-height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+
+/* Nút */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    font-size: 22px;
+    padding: 6px 12px;
+    z-index: 10;
+    border-radius: 6px;
+}
+
+.nav-left { left: 10px; }
+.nav-right { right: 10px; }
+
+/*Stations-------------------------------*/
+.station-item {
+    cursor: pointer;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+.station-item:hover {
+    background: #e6f2ff;
+}
+.station-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*Rental---------------------------------*/
+.guide-img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/*Payment--------------------------------*/
+.info-box {
+    background: #e6f2ff;
+    border-radius: 12px;
+    padding: 20px;
+}
+.guide-img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* =========================================
+   PURE CSS BANNER & NAV (EXAM REQUIREMENT)
+   ========================================= */
+.banner-container {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Sidebar Navigation */
+.sidebar-wrapper {
+    position: relative;
+    z-index: 3;
+    border-right: 1px solid rgba(255,255,255,0.3);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.sidebar-nav {
+    list-style: none;
+    padding-left: 0;
+}
+.sidebar-nav .nav-link {
+    color: white !important;
+    font-size: 22px; 
+    font-weight: 500;
+    padding: 12px 20px;
+    transition: 0.3s;
+}
+.sidebar-nav .nav-link:hover {
+    color: #fffd82 !important;
+    background: rgba(255,255,255,0.1);
+    transform: translateX(5px);
+}
+
+/* Banner Buttons */
+.banner-btn-group {
+    position: relative;
+    z-index: 3;
+}
+.banner-btn {
+    display: inline-block;
+    padding: 30px 60px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    color: white !important;
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 16px;
+    backdrop-filter: blur(2px);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.banner-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: white;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    color: #fff !important;
+}
+
+/* Spreading Rings (Vòng lan tỏa) */
+.spreading-rings {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.ring-pos {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+}
+
+.pos-tl { top: 10%; left: 0%; }
+.pos-tc { top: 10%; left: 50%; }
+.pos-br { bottom: 10%; right: 0%; }
+
+.ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 100%;
+    animation: spreadRing 6s infinite linear;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.ring:nth-child(2) {
+    animation-delay: 2.5s;
+}
+
+@keyframes spreadRing {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.8;
+    }
+    85% {
+        opacity: 0.8;
+    }
+    100% {
+        width: 1500px;
+        height: 1500px;
+        opacity: 0;
+    }
+}
+
+/* Blur effect when overlapping buttons */
+/* We simulate this by having a blur layer that follows the rings or by applying blur to components above */
+.banner-btn {
+    transition: backdrop-filter 0.5s ease;
+}
+
+/* Add a slight blur to the button area inherently to catch the "spread" feel */
+.banner-btn-group::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    /* This area will potentially overlap with rings */
+}
+/* Flickering Animation */
+.flicker-text .char {
+    opacity: 1;
+    transition: opacity 0.1s;
+    display: inline-block;
+}
+.flicker-text.active .char {
+    animation: flickerAnimation 2s forwards;
+    animation-delay: var(--delay);
+}
+@keyframes flickerAnimation {
+    0% { opacity: 0; text-shadow: 0 0 0px #fff; }
+    5% { opacity: 1; text-shadow: 0 0 10px #fff; }
+    10% { opacity: 0; }
+    15% { opacity: 1; }
+    20% { opacity: 0; }
+    25% { opacity: 1; text-shadow: 0 0 20px #ec4899; }
+    100% { opacity: 1; text-shadow: none; }
+}
