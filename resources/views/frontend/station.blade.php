@@ -5,14 +5,14 @@
 
     <div class="card shadow-sm" >
         
-        <!-- HEADER -->
+        <!-- header -->
         <div class="card-header bg-theme-blue">
             <h5><i class="fa fa-map-marker-alt"></i> Stations</h5>
         </div>
 
         <div class="card-body">
 
-            <!-- ===== DÒNG 1: FILTER ===== -->
+            <!-- row 1: filter -->
             <div class="row mb-3">
                 <div class="col-md-4 ms-auto">
                     <select id="areaFilter" class="form-select">
@@ -24,11 +24,11 @@
                 </div>
             </div>
 
-            <!-- ===== DÒNG 2: LIST STATIONS ===== -->
+            <!-- row 2: list stations -->
             <div id="stationList">
                 
                 @foreach(\App\Models\Station::all() as $st)
-                <!-- Station {{ $st->id }} -->
+                <!-- station {{ $st->id }} -->
                 <div class="station-item" data-area="{{ $st->ward_id }}" data-bs-toggle="collapse" data-bs-target="#s{{ $st->id }}">
                     <i class="fa fa-bicycle text-theme-pink"></i> Trạm {{ $st->name }}
                 </div>
@@ -50,12 +50,12 @@
                                     <i class="fa fa-star text-secondary fs-5" data-val="4"></i>
                                     <i class="fa fa-star text-secondary fs-5" data-val="5"></i>
                                 </span>
-                                <!-- Tỉ lệ đánh giá hiển thị ở đây -->
+                                <!-- rating stats display here -->
                                 <div class="rating-stats text-muted mt-1 mb-3" style="font-size: 0.9em;">
                                     <span class="rating-avg" id="avg-{{ $st->id }}">0</span>/5 (<span class="rating-percent" id="pct-{{ $st->id }}">0</span>%) - <span class="rating-count" id="cnt-{{ $st->id }}">0</span> lượt đánh giá
                                 </div>
 
-                                <!-- Review Section -->
+                                <!-- review section -->
                                 <div class="review-section mt-3 p-3 bg-white rounded border">
                                     <h6><i class="fa fa-comments"></i> Đánh giá & Bình luận</h6>
                                     
@@ -72,7 +72,7 @@
                                     @endauth
 
                                     <div class="reviews-list" id="list-{{ $st->id }}" style="max-height: 300px; overflow-y: auto;">
-                                        <!-- Reviews will be loaded here -->
+                                        <!-- reviews will be loaded here -->
                                         <p class="text-center text-muted small mt-2">Đang tải bình luận...</p>
                                     </div>
                                     <div class="text-center mt-2">
@@ -96,10 +96,10 @@
 @push('scripts')
 <script src="/assets/js/filter_area_bikego.js"></script>
 <script>
-// CSRF Token for AJAX
+// csrf token for ajax
 const csrfToken = '{{ csrf_token() }}';
 
-// Function to load reviews
+// function to load reviews
 function loadReviews(stationId, offset = 0, append = false) {
     fetch(`/review/more?station_id=${stationId}&offset=${offset}`)
         .then(res => res.json())
@@ -136,7 +136,7 @@ function loadReviews(stationId, offset = 0, append = false) {
                 moreBtn.style.display = 'none';
             }
 
-            // Update Stats
+            // update stats
             if (data.stats) {
                 document.getElementById(`avg-${stationId}`).innerText = data.stats.avg;
                 document.getElementById(`pct-${stationId}`).innerText = data.stats.percent;
@@ -153,7 +153,7 @@ document.addEventListener('shown.bs.collapse', function (e) {
     }
 });
 
-// Handle Star Rating Click
+// handle star rating click
 document.querySelectorAll('.star-rating i').forEach(star => {
     star.addEventListener('click', function() {
         const container = this.parentElement;
@@ -174,7 +174,7 @@ document.querySelectorAll('.star-rating i').forEach(star => {
     });
 });
 
-// Handle Review Submit
+// handle review submit
 document.querySelectorAll('.submit-review').forEach(btn => {
     btn.addEventListener('click', function() {
         const stationId = this.dataset.stationId;
@@ -198,13 +198,13 @@ document.querySelectorAll('.submit-review').forEach(btn => {
         .then(data => {
             if (data.success) {
                 document.getElementById(`comment-${stationId}`).value = '';
-                loadReviews(stationId, 0); // Reload latest
+                loadReviews(stationId, 0); // reload latest
             }
         });
     });
 });
 
-// Handle Load More
+// handle load more
 document.querySelectorAll('.load-more').forEach(btn => {
     btn.addEventListener('click', function() {
         loadReviews(this.dataset.stationId, this.dataset.offset, true);

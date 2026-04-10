@@ -5,7 +5,7 @@
     
     <div class="card shadow-sm">
 
-        <!-- HEADER -->
+        <!-- header -->
         <div class="card-header bg-theme-blue">
             <h5><i class="fa fa-bicycle"></i> Rental Bike</h5>
         </div>
@@ -23,9 +23,9 @@
                 @csrf
             <div class="row">
                 
-                <!-- ===== CỘT TRÁI: FORM ===== -->
+                <!-- left column: form -->
                 <div class="col-md-6">
-                    <!-- Chọn khu vực -->
+                    <!-- select ward -->
                     <div class="mb-3">
                         <label class="form-label">Chọn phường</label>
                         <select name="area_slc" id="areaSelect" class="form-select">
@@ -36,7 +36,7 @@
                         </select>
                     </div>
 
-                    <!-- Chọn trạm -->
+                    <!-- select station -->
                     <div class="mb-3">
                         <label class="form-label">Chọn trạm</label>
                         <select name="station_slc" id="stationSelect" class="form-select border-0 shadow-sm">
@@ -47,11 +47,11 @@
                         </select>
                     </div>
 
-                    <!-- Chọn xe (Trực quan + Dropdown) -->
+                    <!-- select bike -->
                     <div class="mb-3">                        
                         <label class="form-label">Chọn xe và Biển số</label>
                         <div id="bikeList" class="p-3 bg-light rounded border mb-2" style="display:none; max-height: 300px; overflow-y: auto;">
-                            <!-- Bikes will be loaded here -->
+                            <!-- bikes will be loaded here -->
                         </div>
                         <select name="bike_number" id="bikeNumberSelect" class="form-select border-0 shadow-sm" style="display:none;">
                             <option value="">-- Chọn Biển số xe --</option>
@@ -59,14 +59,14 @@
                         <div id="noBikesMsg" class="text-danger small" style="display:none;">Trạm này hiện không có xe nào sẵn sàng.</div>
                     </div>
 
-                    <!-- Button -->
+                    <!-- button -->
                     <button class="btn btn-theme rounded-pill fw-bold shadow-sm w-100" type="submit" id="rentBtn" disabled>
                         <i class="fa fa-check-circle"></i> Rent Bike
                     </button>
 
                 </div>
                 
-                <!-- ===== CỘT PHẢI: HƯỚNG DẪN ===== -->
+                <!-- right column: instructions -->
                 <div class="col-md-6 text-center">
                     <img src="/assets/rental.jpg" class="guide-img">
                 </div>
@@ -82,7 +82,7 @@
 
 @push('scripts')
 <script>
-    // Link Area to Stations
+    // link area to stations
     document.getElementById('areaSelect').addEventListener('change', function() {
         let area = this.value;
         let stationSelect = document.getElementById('stationSelect');
@@ -100,7 +100,7 @@
         document.getElementById('rentBtn').disabled = true;
     });
 
-    // Link Station to Bikes
+    // link station to bikes
     document.getElementById('stationSelect').addEventListener('change', function() {
         let stationId = this.value;
         let bikeSelect = document.getElementById('bikeNumberSelect');
@@ -133,7 +133,7 @@
                         option.textContent = `${bike.bike_number} (${typeLabel})`;
                         bikeSelect.appendChild(option);
 
-                        // Visual indicator
+                        // visual indicator
                         let item = document.createElement('div');
                         item.className = 'd-flex justify-content-between align-items-center p-2 mb-1 bg-white rounded shadow-sm border-start border-4 border-primary';
                         item.innerHTML = `

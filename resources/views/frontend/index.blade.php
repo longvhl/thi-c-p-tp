@@ -18,7 +18,7 @@
         cursor: pointer;
     }
 </style>
-<!-- =====TOP BIKER ===== -->
+<!-- top biker -->
 <div class="container mt-4">
     <div class="card shadow-sm">
         <div class="card-header bg-theme-blue">
@@ -27,7 +27,7 @@
 
         <div class="card-body">
 
-            <!-- Top 1-3 -->
+            <!-- top 1-3 -->
             <div class="row mb-3">
                 @if(isset($topBikers) && count($topBikers) > 0)
                 @foreach($topBikers->take(3) as $idx => $tb)
@@ -51,7 +51,7 @@
                 @endif
             </div>
 
-            <!-- Top còn lại (4-10) -->
+            <!-- remaining top (4-10) -->
             <div class="row">
                 <div class="col-12">                    
                     <div  class="card shadow-sm">
@@ -89,7 +89,7 @@
     </div>
 </div>
 
-<!-- ===== LET'S BIKEGO ===== -->
+<!-- let's bikego -->
 <div class="container mt-4">
     <div class="card shadow-sm border-0" style="border-radius: 20px; overflow: hidden;">
         <div class="card-header bg-theme-blue text-white py-3">
@@ -122,7 +122,7 @@
     </div>
 </div>
 
-<!-- =====TOP STATIONS ===== -->
+<!-- top stations -->
 <div class="container mt-4 mb-5">
     <div class="card shadow-sm border-0" style="border-radius: 20px; overflow: hidden;">
         <div class="card-header bg-warning text-dark py-3 d-flex justify-content-between align-items-center">

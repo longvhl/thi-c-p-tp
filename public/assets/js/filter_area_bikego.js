@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     station.style.display = 'none';
                     if(detailDiv) {
-                        // Collapse it if hidden
+                        // collapse it if hidden
                         detailDiv.classList.remove('show');
                         detailDiv.style.display = 'none';
                     }
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // Whenever a station is clicked to toggle its collapse panel, reset the inline display None if any
+        // whenever a station is clicked to toggle its collapse panel, reset the inline display none if any
         document.querySelectorAll('.station-item').forEach(st => {
             st.addEventListener('click', function() {
                 const targetId = this.getAttribute('data-bs-target');

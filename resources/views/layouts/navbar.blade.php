@@ -1,14 +1,14 @@
-<!-- ===== HEADER (Logo) ===== -->
+<!-- header (logo) -->
 <div class="bg-white text-center py-2">
     <a href="/" class="logo-text">
         Bike<span> Go </span>
     </a>
 </div>
 
-<!-- ===== NAVIGATION & BANNER ===== -->
+<!-- navigation & banner -->
 <div class="banner-container">
     
-    <!-- Spreading Rings Effect -->
+    <!-- spreading rings effect -->
     <div class="spreading-rings">
         <div class="ring-pos pos-tl"><div class="ring"></div><div class="ring"></div></div>
         <div class="ring-pos pos-tc"><div class="ring"></div><div class="ring"></div></div>
@@ -18,7 +18,7 @@
     <div class="container h-100 position-relative" style="z-index: 2;">
         <div class="row h-100 align-items-center">
             
-            <!-- Left: Navigation Sidebar -->
+            <!-- left: navigation sidebar -->
             <div class="col-md-3 h-100 pt-3 pb-3">
                 <div class="sidebar-wrapper">
                     <ul class="nav flex-column sidebar-nav">
@@ -40,7 +40,7 @@
                 </div>
             </div>
             
-            <!-- Right: Banner Buttons -->
+            <!-- right: banner buttons -->
             <div class="col-md-9 text-center">
                 @auth
                 <div class="mb-3">

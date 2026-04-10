@@ -1,4 +1,4 @@
-<!-- ===== FOOTER ===== -->
+<!-- footer -->
 <footer class="mt-5 text-white" style="background: linear-gradient(to right, #0ea5e9, #ec4899); padding: 25px 0;">
     <div class="container">
         <div class="row align-items-center">

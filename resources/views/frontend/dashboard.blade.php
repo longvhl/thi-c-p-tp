@@ -5,7 +5,7 @@
 @section('content')
 <div class="container mt-4 pb-5">
     <div class="row">
-        <!-- Sidebar Menu User -->
+        <!-- sidebar menu user -->
         <div class="col-md-3 mb-4">
             <div class="list-group shadow-sm border-0">
                 <a href="/dashboard" class="list-group-item list-group-item-action active bg-theme-blue border-0 fw-bold"><i class="fa fa-user"></i> Tổng quan (Dashboard)</a>
@@ -22,16 +22,16 @@
             </div>
         </div>
 
-        <!-- Main User Panel -->
+        <!-- main user panel -->
         <div class="col-md-9">
             <div class="card shadow-sm border-0 mb-4">
                 <div class="card-body p-4">
-                    <h4>Chào mừng, {{ $user->name }}!</h4>
-                    <p class="text-muted">Email: <strong>{{ $user->email }}</strong></p>
+                    <h4>Chào mừng, {{ $user-> name }}!</h4>
+                    <p class="text-muted">Email: <strong>{{ $user-> email }}</strong></p>
                 </div>
             </div>
 
-            <!-- Stats Boxes -->
+            <!-- stats boxes -->
             <div class="row text-center mb-4">
                 <div class="col-md-6 mb-3">
                     <div class="bg-light p-4 rounded-3 shadow-sm border-start border-primary border-4">

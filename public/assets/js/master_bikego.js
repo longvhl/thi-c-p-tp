@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Only initialize slider if slider exists
+    // only initialize slider if slider exists
     const slider = document.getElementById('slider');
     if (!slider) return;
 
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         currentIndex += direction;
 
-        // Bounds check
+        // bounds check
         if (currentIndex < 0) {
             currentIndex = 0;
         } else if (currentIndex > totalSlides - visibleSlides) {

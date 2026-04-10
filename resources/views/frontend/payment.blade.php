@@ -5,7 +5,7 @@
 
     <div class="card shadow-sm">
 
-        <!-- HEADER -->
+        <!-- header -->
         <div class="card-header bg-theme-blue">
             <h5><i class="fa fa-credit-card"></i> Payment</h5>
         </div>
@@ -26,10 +26,10 @@
                 @csrf
             <div class="row">
                 
-                <!-- ===== CỘT TRÁI ===== -->
+                <!-- left column -->
                 <div class="col-md-6">
                    
-                    <!-- ===== PHẦN 1: THÔNG TIN XE ===== -->
+                    <!-- bike information -->
                     <div class="info-box mb-4">
                         <h5><i class="fa fa-bicycle"></i> Thông tin xe đang thuê</h5>
                         <hr>
@@ -48,10 +48,10 @@
 
                     </div>
 
-                    <!-- ===== PHẦN 2: FORM TRẢ XE ===== -->
+                    <!-- return form -->
                     <div>
                         <h5><i class="fa fa-undo"></i> Trả xe</h5>                        
-                        <!-- Chọn khu vực -->
+                        <!-- select ward -->
                         <div class="mb-3">
                             <label class="form-label">Chọn phường</label>
                             <select name="ward_slc" id="areaSelect" class="form-select">
@@ -62,7 +62,7 @@
                             </select>
                         </div>
 
-                        <!-- Chọn trạm -->
+                        <!-- select station -->
                         <div class="mb-3">
                             <label class="form-label">Chọn trạm trả xe</label>
                             <select name="return_station" id="stationSelect" class="form-select border-0 shadow-sm">
@@ -73,7 +73,7 @@
                             </select>
                         </div>
 
-                        <!-- Button -->
+                        <!-- button -->
                         <button class="btn btn-theme rounded-pill fw-bold shadow-sm w-100" type="button" data-bs-toggle="modal" data-bs-target="#reviewModal">
                             <i class="fa fa-money-bill"></i> Trả xe & Thanh toán
                         </button>
@@ -81,7 +81,7 @@
 
                 </div>
 
-                <!-- ===== CỘT PHẢI ===== -->
+                <!-- right column -->
                 <div class="col-md-6 text-center">
                     <img src="/assets/payment.jpg" class="guide-img">
                     
@@ -89,7 +89,7 @@
 
             </div>
 
-            <!-- Modal Đánh giá -->
+            <!-- review modal -->
             <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -123,7 +123,7 @@
                 </div>
               </div>
             </div>
-            <!-- End Modal -->
+            <!-- end modal -->
 
             </form>
             @endif
@@ -136,7 +136,7 @@
 
 @push('scripts')
 <script>
-    // Link Area to Stations
+    // link area to stations 
     document.getElementById('areaSelect').addEventListener('change', function() {
         let area = this.value;
         let stationSelect = document.getElementById('stationSelect');
