@@ -31,7 +31,7 @@
             <div class="row mb-3">
                 @if(isset($topBikers) && count($topBikers) > 0)
                 @foreach($topBikers->take(3) as $idx => $tb)
-                <div class="col-md-4">
+                <div class="col-md-4 mb-3 mb-md-0">
                     <div class="top-user text-center p-3 border rounded top-biker-card shadow-sm h-100">
                         <div class="fs-1">
                         @if($idx == 0) 🥇
@@ -98,7 +98,7 @@
 
         <div class="card-body bg-light">
             <div class="row text-center g-4">
-                <div class="col-md-6">
+                <div class="col-md-6 mb-3 mb-md-0">
                     <div class="stat-box h-100 p-4 border-0 shadow-sm" style="background: white; border-radius: 15px;">
                         <div class="bg-primary bg-opacity-10 d-inline-block p-3 rounded-circle mb-3">
                             <i class="fa fa-bicycle text-primary" style="font-size: 30px;"></i>
@@ -138,7 +138,7 @@
                 <div class="banner" style="height: auto; overflow: hidden;">
                     <div class="slider d-flex" id="slider" style="transition: transform 0.5s ease;">
                         @foreach($topStations as $station)
-                        <div class="slide flex-shrink-0" style="width: 25%; padding: 10px;">
+                        <div class="slide flex-shrink-0">
                             <div class="card h-100 border-0 shadow-sm station-card" style="border-radius: 15px; overflow: hidden;">
                                 <img src="{{ $station->image_url ?: '/assets/default_station.png' }}" class="card-img-top" style="height: 150px; object-fit: cover;">
                                 <div class="card-body p-3">

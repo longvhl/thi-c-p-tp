@@ -21,7 +21,7 @@
             <!-- left: navigation sidebar -->
             <div class="col-md-3 h-100 pt-3 pb-3">
                 <div class="sidebar-wrapper">
-                    <ul class="nav flex-column sidebar-nav">
+                    <ul class="nav flex-md-column flex-row flex-wrap justify-content-center sidebar-nav">
                         <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
                         <li class="nav-item"><a href="/station" class="nav-link">Trạm xe</a></li>
                         @auth
